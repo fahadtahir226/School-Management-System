@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./src/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./src/stylesheet/css/login.css">
+
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loaderShell"></div>
+        <div id="loader" class="loader">
+        </div>
+        <div class="row">
+            <div class="center col s12">
+                <h3>Account login</h3>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s12 m6 l4 "><a class="user active" href="#user"
+                                    onclick="renderForm('user')">User</a></li>
+                            <li class="tab col s12 m6 l4 "><a href="#moderate"
+                                    onclick="renderForm('moderate')">Moderate</a></li>
+                            <li class="tab col s12 m6 l4 "><a href="#admin" onclick="renderForm('admin')">Admin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="admin" class="col s12">
+                <!-- Admin Credential Page -->
+            </div>
+            <div id="moderate" class="col s12">
+                <!-- Moderate Credential Page -->
+            </div>
+            <div id="user" class="col s12">
+                <div class='container-fluid form-page-main-container'>
+                    <div class='container'>
+                        <h4 class='center heading'>Welcome user </h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <form>
+                                    <input class="col s12" id='login-email' type='email' name='email'
+                                        placeholder="Enter your email" required="yes" />
+
+                                    <input class="col s12" id='login-pass' type='password' name='password'
+                                        placeholder="Enter your password" required="yes" />
+
+                                    <div class="input-field col s12">
+                                        <button onclick="login(event)" class="btn btn-large btn-primary">
+                                            Login
+                                        </button>
+                                        <button class="btn btn-large btn-secondary" style="margin-left: 5% "
+                                            onclick='ClearField(event)'>
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script src="./index.js"></script>
+    <script src="./config/firebase-config.js"></script>
+    <script src="./config/auth.js"></script>
+    <script src="./login/loginPage.js"></script>
+    <script src="./loader.js"></script>
+
+</body>
+
+</html>

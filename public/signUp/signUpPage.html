@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../src/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../src/stylesheet/css/login.css">
+
+    <title>Register</title>
+</head>
+
+<body>
+
+    <div class="container">
+            <div class="loaderShell"></div>
+            <div id="loader" class="loader">
+            </div>
+          
+        <div class="row">
+            <div class="center col s12">
+                <h3>Account Register</h3>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s12 m6 l6 "><a class="user active" href="#user"
+                                    onclick="renderForm('user')">User</a></li>
+                            <li class="tab col s12 m6 l6 "><a class="active" href="#moderate"
+                                    onclick="renderForm('moderate')">Moderate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="moderate-reg" class="col s12">
+                <!-- Moderate Credential Page -->
+            </div>
+            <div id="user-reg" class="col s12">
+                    <div class="container-fluid form-page-main-container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col s12 center">
+                                        <h4 class='name' >register user </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 m8 offset-m2">
+                                        <form >
+                                            <input type="text" placeholder="Enter your name" id="reg-name" required="yes" classes="col s12" />
+                               
+                                            <input type="email" placeholder="Enter your email address" id="reg-email" required="yes" classes="col s12" />
+                                            <input type="password" placeholder="Password" id="reg-password" required="yes" classes="col s12" />
+                                            <div class="input-field col s12">
+                                                <button onclick="Register(event)" class="btn btn-large btn-primary" >
+                                                    register
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-large btn-secondary"
+                                                    style="margin-left: 5%"
+                                                    onclick='ClearField(event)'
+                                                >
+                                                    cancel
+                                                </button>
+                                            </div>
+                                           </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="../index.js"></script>
+    <script src="./signUpPage.js"></script>
+    <script src="../config/firebase-config.js"></script>
+    <script src="../config/auth.js"></script>
+    <script src="../loader.js"></script>
+
+</body>
+
+</html>

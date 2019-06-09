@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+    <link rel="stylesheet" href="../src/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../src/stylesheet/css/login.css">
+</head>
+
+<body>
+        <div class="loaderShell"></div>
+        <div id="loader" class="loader"></div>
+    <nav>
+        <div class="nav-wrapper">
+
+                <a href="#" style="color: black" class=" brand-logo">ADMIN</a>
+
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="../signUp/signUpPage.html">Add User</a></li>
+                <li><button class="btn btn-large btn-primary" onclick='SignOut(event)'>Log
+                        Out
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table style="margin-top: 90px;" class="highlight responsive-table centered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Submit</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_admin">
+
+        </tbody>
+    </table>
+    <br />      <br />      <br />
+    <h4>LOGS</h4>
+    <table  class="highlight responsive-table">
+        <thead>
+            <tr>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_logs">
+
+        </tbody>
+    </table>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script src="../config/firebase-config.js" ></script>
+    <script src="../config/auth.js"></script>
+    <script src="../index.js"></script>
+    <script src="../loader.js"></script>
+    <script src="./admin.js"></script>
+</body>
+
+</html>
